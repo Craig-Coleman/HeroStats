@@ -1,0 +1,148 @@
+#header {
+    text-align: center;
+    background-image: url(http://www.vinzdecals.com/gfx/longdragon1.gif);
+}
+
+#navbar {
+    text-align: center;
+}
+
+#health {
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+#health h1 {
+    width: 100%;
+    text-align: center;
+}
+
+#health h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#healthcount {
+    border: 2px solid black;
+    max-width: 100px !important;
+    display: inline-block;
+    position: relative;
+    bottom: 7px;
+}
+
+#pic {
+    max-width: 200px;
+    margin-left: 15px;
+    border: 3px solid black;
+    position: relative;
+    top: 15px;
+}
+
+#statblock {
+    float: left;
+    clear: top;
+    clear: bottom;
+    clear: left;
+    width: 200px;
+    margin-left: 15px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+#healthroll {
+    width: 220px;
+    display: inline-block;
+    margin-left: 75px;
+}
+
+#roll {
+    text-align: center;
+    margin-top: 40px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+#current-roll {
+    text-align: center;
+}
+
+#backstory {
+    margin-left: 15px;
+    width: 500px;
+    height: 100px;
+}
+
+#backstory-title {
+    margin-left: 200px;
+}
+
+#invtitle {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#form {
+    text-align: center;
+}
+
+#formtitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page {
+    background-image: url(https://images3.alphacoders.com/238/238415.jpg);
+    padding-bottom: 100%
+}
+
+.navlink {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    padding: 12px;
+    margin: 0 6px 6px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+
+.statname {
+    display: inline-block;
+}
+
+.statvalue {
+    display: inline-block;
+    margin: 0px 20px;
+    border: 2px solid black;
+    padding: 2px 2px;
+}
+
+.details {
+    display: inline-block;
+    margin-left: 75px;
+    position: relative;
+    bottom: 70px;
+    width: 220px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: white;
+}
+
+.buttons {
+    display: inline-block;
+    width: 40px;
+}
+
+.add {
+    width: 20px;
+    text-align: center;
+}
+
+.item h3 {
+    display: inline-block;
+    margin-left: 20px;
+    background-color: white;
+}
+
