@@ -1,23 +1,37 @@
 {
-    "charInfo": [
-      {
-        "characterName": "Minsc",
-        "characterRace": "Human",
-        "characterClass": "Ranger",
-        "characterLevel": 5
-        }
-      ],
-    "gear": [
-      {
-        "name": "Two-Handed Sword",
-        "stat": "Damage: 1d12 + 2",
-        "weight": "15 lbs."
-      },
-      {
-        "name": "Scale Mail",
-        "stat": "AC: 15",
-        "weight": "30 lbs."
-      }
-    ]
-  }
-  
+  "charInfo": [
+    {
+      "id": 1,
+      "characterName": "Minsc",
+      "characterRace": "Human",
+      "characterClass": "Ranger",
+      "characterLevel": 5
+    }
+  ],
+  "gear": [
+    {
+      "id": 1,
+      "name": "Two-Handed Sword",
+      "stat": "Damage: 1d12 + 2",
+      "weight": "15 lbs."
+    },
+    {
+      "id": 2,
+      "name": "Scale Mail",
+      "stat": "AC: 15",
+      "weight": "30 lbs."
+    },
+    {
+      "name": "Dagger",
+      "stat": "Damage: 1d4 + 1",
+      "weight": "3 lbs.",
+      "id": 3
+    },
+    {
+      "name": "Shortbow",
+      "stat": "Damage: 1d4 + 1",
+      "weight": "15 lbs.",
+      "id": 4
+    }
+  ]
+}

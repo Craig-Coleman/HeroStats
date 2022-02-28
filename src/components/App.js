@@ -21,8 +21,17 @@ function App() {
     }, [])
 
     function updateInventory(newItem) {
-        setGear([...gear, newItem])
-    }
+        fetch("http://localhost:3000/gear", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newItem),
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .then(setGear([...gear, newItem]));
+    };
 
     return (
         <div>
