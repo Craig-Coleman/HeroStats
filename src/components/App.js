@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import CharSheet from "./CharSheet";
@@ -8,33 +8,21 @@ import Pic from "./Pic";
 
 function App() {
 
-    const startGear = [
-        {
-            name: "Two-Handed Sword",
-            stat: "Damage: 1d12 + 2",
-            weight: "15 lbs."
-        },
-        {
-            name: "Scale Mail",
-            stat: "AC: 15",
-            weight: "30 lbs."
-        }
-    ];
+    const [charInfo, setCharInfo] = useState([])
+    const [gear, setGear] = useState([])
 
-    const [gear, setGear] = useState(startGear)
-
-    const charInfo = {
-    characterName : "Minsc",
-    characterRace: "Human",
-    characterClass: "Ranger",
-    characterLevel: 5,
-    }
+    useEffect(() => {
+        fetch("http://localhost:3000/charinfo")
+            .then(res => res.json())
+            .then(data => setCharInfo(data[0]))
+        fetch("http://localhost:3000/gear")
+            .then(res => res.json())
+            .then(data => setGear(data))
+    }, [])
 
     function updateInventory(newItem) {
         setGear([...gear, newItem])
     }
-
-    console.log(gear)
 
     return (
         <div>

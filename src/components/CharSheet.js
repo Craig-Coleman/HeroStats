@@ -6,6 +6,7 @@ import Health from "./Health";
 import Roll from "./Roll";
 
 function CharSheet({ charInfo }) {
+
     return (
         <div className="page" >
             <div>

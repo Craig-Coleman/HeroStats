@@ -1,0 +1,23 @@
+{
+    "charInfo": [
+      {
+        "characterName": "Minsc",
+        "characterRace": "Human",
+        "characterClass": "Ranger",
+        "characterLevel": 5
+        }
+      ],
+    "gear": [
+      {
+        "name": "Two-Handed Sword",
+        "stat": "Damage: 1d12 + 2",
+        "weight": "15 lbs."
+      },
+      {
+        "name": "Scale Mail",
+        "stat": "AC: 15",
+        "weight": "30 lbs."
+      }
+    ]
+  }
+  
