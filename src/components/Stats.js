@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 
 function Stats() {
 
@@ -36,7 +36,7 @@ function Stats() {
             charisma: function() {setCharisma(charisma + 1)}
         }
         addFunctions[stat]();
-    }
+    };
 
     function subtractStat(event) {
         const stat = event.target.parentNode.parentNode.id
@@ -49,7 +49,7 @@ function Stats() {
             charisma: function() {setCharisma(charisma - 1)}
         }
         subtractFunctions[stat]();
-    }
+    };
 
     return (
         <div id="statblock" >

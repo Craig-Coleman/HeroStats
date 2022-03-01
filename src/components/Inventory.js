@@ -9,15 +9,15 @@ function Inventory({ gear, updateInventory }) {
 
     function updateName(newName) {
         setName(newName);
-    }
+    };
 
     function updateStat(newStat) {
         setStat(newStat);
-    }
+    };
 
     function updateWeight(newWeight) {
         setWeight(newWeight);
-    }
+    };
 
     const formData = {
         name,
@@ -28,13 +28,13 @@ function Inventory({ gear, updateInventory }) {
     function handleAddItem(event) {
         event.preventDefault();
         updateInventory(formData);
-    }
+    };
 
     const gearList = gear.map((item) => {
         return (
             <Item key={item.name} item={item} />
-        )
-    })
+        );
+    });
 
     return (
         <div className="page" >

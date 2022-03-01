@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 function Roll() {
 
-    const [currentRoll, setCurrentRoll] = useState("N/A")
+    const [currentRoll, setCurrentRoll] = useState("N/A");
 
     function rollDice(event) {
         const die = event.target.innerHTML
@@ -13,9 +13,10 @@ function Roll() {
             d10: function() { setCurrentRoll(Math.floor(Math.random() * 10) + 1) },
             d12: function() { setCurrentRoll(Math.floor(Math.random() * 12) + 1) },
             d20: function() { setCurrentRoll(Math.floor(Math.random() * 20) + 1) },
-        }
-        rollFunctions[die]()
-    }
+        };
+        rollFunctions[die]();
+    };
+
     return (
         <div id="roll">
             <h2>Roll</h2>

@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-function Item({item}) {
+function Item({ item }) {
 
     const { name, stat, weight } = item;
 

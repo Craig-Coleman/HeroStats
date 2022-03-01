@@ -18,7 +18,7 @@ function App() {
         fetch("http://localhost:3000/gear")
             .then(res => res.json())
             .then(data => setGear(data))
-    }, [])
+    }, []);
 
     function updateInventory(newItem) {
         fetch("http://localhost:3000/gear", {
