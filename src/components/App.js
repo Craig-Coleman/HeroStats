@@ -8,8 +8,8 @@ import Pic from "./Pic";
 
 function App() {
 
-    const [charInfo, setCharInfo] = useState([])
-    const [gear, setGear] = useState([])
+    const [charInfo, setCharInfo] = useState([]);
+    const [gear, setGear] = useState([]);
 
     useEffect(() => {
         fetch("http://localhost:3000/charinfo")
@@ -34,15 +34,15 @@ function App() {
     };
 
     return (
-        <div>
+        <div className="page" >
             <Header />
             <Switch>
                 <Route path="/" exact >
-                    <h3>Welcome Adventurer!  You're Journey Awaits!</h3>
+                    <h3 id="welcometitle" >Welcome Adventurer!  You're Journey Awaits!</h3>
                     <Pic />
                 </Route>
                 <Route path="/charsheet" >
-                    <CharSheet charInfo={charInfo}/>
+                    <CharSheet charInfo={charInfo} />
                 </Route>
                 <Route path="/info" >
                     <Info charInfo={charInfo} />

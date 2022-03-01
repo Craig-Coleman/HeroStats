@@ -1,13 +1,29 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 function Stats() {
 
-    const [strength, setStrength] = useState(10);
-    const [dexterity, setDexterity] = useState(10);
-    const [constitution, setConstitution] = useState(10);
-    const [wisdom, setWisdom] = useState(10);
-    const [intelligence, setIntelligence] = useState(10);
-    const [charisma, setCharisma] = useState(10);
+    const [strength, setStrength] = useState("");
+    const [dexterity, setDexterity] = useState("");
+    const [constitution, setConstitution] = useState("");
+    const [wisdom, setWisdom] = useState("");
+    const [intelligence, setIntelligence] = useState("");
+    const [charisma, setCharisma] = useState("");
+
+    useEffect(() => {
+        fetch("http://localhost:3000/stats")
+            .then(res => res.json())
+            .then(data => data)
+            .then(data => setStats(data))
+    }, []);
+
+    function setStats(data) {
+        setStrength(data[0].strength);
+        setDexterity(data[0].dexterity);
+        setConstitution(data[0].constitution);
+        setWisdom(data[0].wisdom);
+        setIntelligence(data[0].intelligence);
+        setCharisma(data[0].charisma);
+    };
 
     function addStat(event) {
         const stat = event.target.parentNode.parentNode.id

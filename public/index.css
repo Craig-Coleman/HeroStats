@@ -7,6 +7,12 @@
     text-align: center;
 }
 
+#welcometitle {
+    background-color: white;
+    width: 410px;
+    margin-left: 15px;
+}
+
 #health {
     border: 2px solid black;
     text-align: center;

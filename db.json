@@ -1,7 +1,6 @@
 {
   "charInfo": [
     {
-      "id": 1,
       "characterName": "Minsc",
       "characterRace": "Human",
       "characterClass": "Ranger",
@@ -20,18 +19,18 @@
       "name": "Scale Mail",
       "stat": "AC: 15",
       "weight": "30 lbs."
-    },
+    }
+  ],
+  "stats": [
     {
-      "name": "Dagger",
-      "stat": "Damage: 1d4 + 1",
-      "weight": "3 lbs.",
-      "id": 3
-    },
-    {
-      "name": "Shortbow",
-      "stat": "Damage: 1d4 + 1",
-      "weight": "15 lbs.",
-      "id": 4
+      "id": 1,
+      "strength": 15,
+      "dexterity": 16,
+      "constitution": 14,
+      "wisdom": 7,
+      "intelligence": 12,
+      "charisma": 13,
+      "stat": "strength1"
     }
   ]
 }
