@@ -14,7 +14,7 @@ The inventory page includes a list of current items possessed by the user's char
 
 ## Roadmap
 
-Currently, no changes to the character information or stats will persist in the event of a page refresh.  Changes to inventory, however, will be permanent and will persist in the event of a page refresh.  Development is in the process of changing this so that all changes will be permanent and persist even when the page is refreshed.
+Currently, any changes to a character's stats do not persist when the page is refreshed.  This feature will hopefully be coming soon.
 
 ## Acknowledgments
 
