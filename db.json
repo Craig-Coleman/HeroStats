@@ -1,6 +1,7 @@
 {
   "charInfo": [
     {
+      "id": 1,
       "characterName": "Minsc",
       "characterRace": "Human",
       "characterClass": "Ranger",
@@ -37,6 +38,18 @@
       "intelligence": 12,
       "charisma": 13,
       "stat": "strength1"
+    }
+  ],
+  "backstory": [
+    {
+      "id": 1,
+      "characterBackstory": "Minsc is a fierce ranger who combats evil along side his trusty miniature giant space-hamster, Boo."
+    }
+  ],
+  "health": [
+    {
+      "characterCurrent": 21,
+      "characterMax": 56
     }
   ]
 }

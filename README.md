@@ -16,11 +16,13 @@ The inventory page includes a list of current items possessed by the user's char
 
 Currently, no changes to the character information or stats will persist in the event of a page refresh.  Changes to inventory, however, will be permanent and will persist in the event of a page refresh.  Development is in the process of changing this so that all changes will be permanent and persist even when the page is refreshed.
 
-#Acknowledgments
+## Acknowledgments
 
 The blue dragon image in the header background was taken from the following
 [page](http://www.vinzdecals.com/gfx/longdragon1.gif)
 
 The adventurer image in the page background was taken from the following [page](https://images3.alphacoders.com/238/238415.jpg)
+
+Minsc and Boo are licensed Dungeons and Dragons characters created and owned by Wizards of the Coast.
 
 
