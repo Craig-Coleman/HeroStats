@@ -1,71 +1,26 @@
-# Getting Started with Create React App
+# Table-Top Character Progression Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This application allows the user to keep track of character statistics, health, level, backstory, and inventory when playing a table-top role-playing game.  
 
-In the project directory, you can run:
+When the application first opens, characters are directed to a welcome page with navigational links across the top.  These links allow the user to access a basic character, backstory, and inventory.
 
-### `npm start`
+The character sheet that includes their basic character information (name, race, class, and level) as well as their current statistics and health.  These statistics can be changed by using the "+" and "-" buttons directly next to them.  This page also includes a tool that allows a user to virtually "roll dice" in the event that they do not have physical dice, or prefer to roll digitally.  Simply click the button labeled with the correct die and the roll will show up under the "current roll" title.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When navigating to the backstory page, a textarea is displayed that allows the user to edit their character's backstory, should they choose to do so.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The inventory page includes a list of current items possessed by the user's character, as well as the item stat (damage or amor class) and weight of each item.  This page has a form at the top that allows the user to add items to their inventory, should they need to.  To do so, add the name, stat (it is helpful to include "Damage:" for weapons or "AC:" for armore before the actual stat) and weight of the item in the corresponding form fields, and click the "submit" button.
 
-### `npm test`
+## Roadmap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Currently, no changes to the character information or stats will persist in the event of a page refresh.  Changes to inventory, however, will be permanent and will persist in the event of a page refresh.  Development is in the process of changing this so that all changes will be permanent and persist even when the page is refreshed.
 
-### `npm run build`
+#Acknowledgments
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The blue dragon image in the header background was taken from the following
+[page](http://www.vinzdecals.com/gfx/longdragon1.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The adventurer image in the page background was taken from the following [page](https://images3.alphacoders.com/238/238415.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# phase-2-project
