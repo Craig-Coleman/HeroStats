@@ -48,7 +48,8 @@
   ],
   "health": [
     {
-      "characterCurrent": 21,
+      "id": 1,
+      "characterCurrent": 13,
       "characterMax": 56
     }
   ]

@@ -1,17 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Health() {
 
-    const [currentHP, setCurrentHP] = useState(21);
-    const [maxHP, setMaxHP] = useState(56);
+    const [currentHP, setCurrentHP] = useState("");
+    const [maxHP, setMaxHP] = useState("");
+    
+
+    useEffect(() => {
+        fetch("http://localhost:3000/health")
+        .then(res => res.json())
+        .then(healthData => setHealth(healthData[0]));
+    }, []);
+
+    function setHealth(healthData) {
+        setCurrentHP(healthData.characterCurrent);
+        setMaxHP(healthData.characterMax);
+    }
 
     function addHealth() {
-        setCurrentHP(currentHP + 1);
+        fetch("http://localhost:3000/health/1", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                characterCurrent: currentHP + 1,
+            })
+        })
+        .then( res => res.json())
+        .then(setCurrentHP(currentHP + 1));
     }
 
     function subtractHealth() {
-        setCurrentHP(currentHP - 1);
-    }
+        fetch("http://localhost:3000/health/1", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                characterCurrent: currentHP - 1,
+            })
+        })
+        .then( res => res.json())
+        .then(setCurrentHP(currentHP - 1));
+    };
 
     return (
         <div id="health">
@@ -20,7 +52,7 @@ function Health() {
             <div className="buttons">
                 <button 
                     className="add"
-                    onClick={addHealth}
+                    onClick={(addHealth)}
                 >+</button>
                 <button 
                     onClick={subtractHealth}
