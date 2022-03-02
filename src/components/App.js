@@ -20,7 +20,7 @@ function App() {
             .then(data => setGear(data))
     }, []);
 
-    function updateInventory(newItem) {
+    function addItem(newItem) {
         fetch("http://localhost:3000/gear", {
             method: "POST",
             headers: {
@@ -29,8 +29,14 @@ function App() {
             body: JSON.stringify(newItem),
         })
             .then(res => res.json())
-            .then(data => console.log(data))
-            .then(setGear([...gear, newItem]));
+            .then(item => setGear([...gear, item]));
+    };
+
+    function deleteItem(id) {
+        fetch(`http://localhost:3000/gear/${id}`, {
+            method: "DELETE"
+        })
+        .then(setGear(gear.filter((item) =>item.id !== id)));
     };
 
     return (
@@ -48,7 +54,7 @@ function App() {
                     <Info charInfo={charInfo} />
                 </Route>
                 <Route path="/inventory" >
-                    <Inventory gear={gear} updateInventory={updateInventory}/>
+                    <Inventory gear={gear} addItem={addItem} deleteItem={deleteItem} />
                 </Route>
             </Switch>
         </div>

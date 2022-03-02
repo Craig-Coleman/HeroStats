@@ -98,6 +98,12 @@
     margin-top: 20px;
 }
 
+.deletebutton {
+    width: 100px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
 .page {
     background-image: url(https://images3.alphacoders.com/238/238415.jpg);
     padding-bottom: 100%

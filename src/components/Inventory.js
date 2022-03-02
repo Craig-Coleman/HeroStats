@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Item from "./Item";
 
-function Inventory({ gear, updateInventory }) {
+function Inventory({ gear, addItem, deleteItem }) {
 
     const [name, setName] = useState("");
     const [stat, setStat] = useState("");
@@ -27,12 +27,12 @@ function Inventory({ gear, updateInventory }) {
 
     function handleAddItem(event) {
         event.preventDefault();
-        updateInventory(formData);
+        addItem(formData);
     };
 
     const gearList = gear.map((item) => {
         return (
-            <Item key={item.name} item={item} />
+            <Item key={item.name} item={item} deleteItem={deleteItem} />
         );
     });
 
@@ -40,7 +40,7 @@ function Inventory({ gear, updateInventory }) {
         <div className="page" >
             <h1 id="invtitle">Inventory</h1>
             <h3 id="formtitle" >Add Item</h3>
-            <form id="form" onSubmit={(event) => handleAddItem(event)}>
+            <form id="form" onSubmit={(event) => handleAddItem(event)} >
                 <input 
                     type="text" 
                     placeholder="Item Name"

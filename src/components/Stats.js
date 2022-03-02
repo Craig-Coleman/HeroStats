@@ -13,16 +13,16 @@ function Stats() {
         fetch("http://localhost:3000/stats")
             .then(res => res.json())
             .then(data => data)
-            .then(data => setStats(data))
+            .then(data => setStats(data[0]))
     }, []);
 
-    function setStats(data) {
-        setStrength(data[0].strength);
-        setDexterity(data[0].dexterity);
-        setConstitution(data[0].constitution);
-        setWisdom(data[0].wisdom);
-        setIntelligence(data[0].intelligence);
-        setCharisma(data[0].charisma);
+    function setStats(stats) {
+        setStrength(stats.strength);
+        setDexterity(stats.dexterity);
+        setConstitution(stats.constitution);
+        setWisdom(stats.wisdom);
+        setIntelligence(stats.intelligence);
+        setCharisma(stats.charisma);
     };
 
     function addStat(event) {

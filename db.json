@@ -16,16 +16,10 @@
       "weight": "15 lbs."
     },
     {
-      "id": 2,
       "name": "Scale Mail",
       "stat": "AC: 15",
-      "weight": "30 lbs."
-    },
-    {
-      "name": "Dagger",
-      "stat": "Damage: 1d4 + 1",
-      "weight": "3 lbs.",
-      "id": 3
+      "weight": "30 lbs.",
+      "id": 2
     }
   ],
   "stats": [
@@ -36,8 +30,7 @@
       "constitution": 14,
       "wisdom": 7,
       "intelligence": 12,
-      "charisma": 13,
-      "stat": "strength1"
+      "charisma": 13
     }
   ],
   "backstory": [
@@ -49,7 +42,7 @@
   "health": [
     {
       "id": 1,
-      "characterCurrent": 13,
+      "characterCurrent": 25,
       "characterMax": 56
     }
   ]
