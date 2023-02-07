@@ -25,30 +25,62 @@ function Stats() {
         setCharisma(stats.charisma);
     };
 
+    function updateAddStat(stat, value) {
+        fetch("http://localhost:3000/stats/1", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                [stat]: value
+            })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
+    function updateSubtractStat(stat, value) {
+        fetch("http://localhost:3000/stats/1", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                [stat]: value
+            })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
     function addStat(event) {
         const stat = event.target.parentNode.parentNode.id
+        let value
         const addFunctions = {
-            strength: function() {setStrength(strength + 1)},
-            dexterity: function() {setDexterity(dexterity + 1)},
-            constitution: function() {setConstitution(constitution + 1)},
-            wisdom: function() {setWisdom(wisdom + 1)},
-            intelligence: function() {setIntelligence(intelligence + 1)},
-            charisma: function() {setCharisma(charisma + 1)}
+            strength: function() {setStrength(strength + 1); value = strength + 1},
+            dexterity: function() {setDexterity(dexterity + 1); value = dexterity + 1},
+            constitution: function() {setConstitution(constitution + 1); value = constitution + 1},
+            wisdom: function() {setWisdom(wisdom + 1); value = wisdom + 1},
+            intelligence: function() {setIntelligence(intelligence + 1); value = intelligence + 1},
+            charisma: function() {setCharisma(charisma + 1); value = charisma + 1}
         }
         addFunctions[stat]();
+        updateAddStat(stat, value);
     };
 
     function subtractStat(event) {
         const stat = event.target.parentNode.parentNode.id
+        let value
         const subtractFunctions = {
-            strength: function() {setStrength(strength - 1)},
-            dexterity: function() {setDexterity(dexterity - 1)},
-            constitution: function() {setConstitution(constitution - 1)},
-            wisdom: function() {setWisdom(wisdom - 1)},
-            intelligence: function() {setIntelligence(intelligence - 1)},
-            charisma: function() {setCharisma(charisma - 1)}
+            strength: function() {setStrength(strength - 1); value = strength - 1},
+            dexterity: function() {setDexterity(dexterity - 1); value = dexterity - 1},
+            constitution: function() {setConstitution(constitution - 1); value = constitution - 1},
+            wisdom: function() {setWisdom(wisdom - 1); value = wisdom - 1},
+            intelligence: function() {setIntelligence(intelligence - 1); value = intelligence - 1},
+            charisma: function() {setCharisma(charisma - 1); value = charisma - 1}
         }
         subtractFunctions[stat]();
+        updateSubtractStat(stat, value)
     };
 
     return (

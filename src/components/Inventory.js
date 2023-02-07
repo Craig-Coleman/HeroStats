@@ -28,6 +28,9 @@ function Inventory({ gear, addItem, deleteItem }) {
     function handleAddItem(event) {
         event.preventDefault();
         addItem(formData);
+        setName("");
+        setStat("");
+        setWeight("");
     };
 
     const gearList = gear.map((item) => {

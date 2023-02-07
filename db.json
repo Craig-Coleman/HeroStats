@@ -25,24 +25,25 @@
   "stats": [
     {
       "id": 1,
-      "strength": 15,
-      "dexterity": 16,
+      "strength": 17,
+      "dexterity": 17,
       "constitution": 14,
-      "wisdom": 7,
+      "wisdom": 8,
       "intelligence": 12,
-      "charisma": 13
+      "charisma": 13,
+      "stat": 18
     }
   ],
   "backstory": [
     {
       "id": 1,
-      "characterBackstory": "Minsc is a fierce ranger who combats evil along side his trusty miniature giant space-hamster, Boo."
+      "characterBackstory": "Minsc is a fierce ranger who combats evil along side his trusty miniature giant space-hamste"
     }
   ],
   "health": [
     {
       "id": 1,
-      "characterCurrent": 22,
+      "characterCurrent": 31,
       "characterMax": 56
     }
   ]

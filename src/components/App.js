@@ -44,7 +44,7 @@ function App() {
             <Header />
             <Switch>
                 <Route path="/" exact >
-                    <h3 id="welcometitle" >Welcome Adventurer!  You're Journey Awaits!</h3>
+                    <h3 id="welcometitle" >Welcome Adventurer!  Your Journey Awaits!</h3>
                     <Pic />
                 </Route>
                 <Route path="/charsheet" >
