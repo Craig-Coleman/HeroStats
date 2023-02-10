@@ -7,7 +7,7 @@ function Health() {
     
 
     useEffect(() => {
-        fetch("http://localhost:3000/health")
+        fetch("https://demo-json.onrender.com/health")
         .then(res => res.json())
         .then(healthData => setHealth(healthData[0]));
     }, []);
@@ -18,7 +18,7 @@ function Health() {
     }
 
     function addHealth() {
-        fetch("http://localhost:3000/health/1", {
+        fetch("https://demo-json.onrender.com/health/1", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ function Health() {
     }
 
     function subtractHealth() {
-        fetch("http://localhost:3000/health/1", {
+        fetch("https://demo-json.onrender.com/health/1", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

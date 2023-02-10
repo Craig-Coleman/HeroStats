@@ -12,16 +12,16 @@ function App() {
     const [gear, setGear] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/charinfo")
+        fetch("https://demo-json.onrender.com/charinfo")
             .then(res => res.json())
             .then(data => setCharInfo(data[0]))
-        fetch("http://localhost:3000/gear")
+        fetch("https://demo-json.onrender.com/gear")
             .then(res => res.json())
             .then(data => setGear(data))
     }, []);
 
     function addItem(newItem) {
-        fetch("http://localhost:3000/gear", {
+        fetch("https://demo-json.onrender.com/gear", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function App() {
     };
 
     function deleteItem(id) {
-        fetch(`http://localhost:3000/gear/${id}`, {
+        fetch(`https://demo-json.onrender.com/${id}`, {
             method: "DELETE"
         })
         .then(setGear(gear.filter((item) =>item.id !== id)));

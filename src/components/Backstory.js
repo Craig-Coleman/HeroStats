@@ -5,13 +5,13 @@ function Backstory() {
     const [backstory, setBackstory] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3000/backstory")
+        fetch("https://demo-json.onrender.com/backstory")
         .then(res => res.json())
         .then(data => setBackstory(data[0].characterBackstory));
     }, []);
 
     function updateBackstory(newBackstory) {
-        fetch("http://localhost:3000/backstory/1", {
+        fetch("https://demo-json.onrender.com/backstory/1", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

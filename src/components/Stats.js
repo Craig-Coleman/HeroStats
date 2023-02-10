@@ -10,7 +10,7 @@ function Stats() {
     const [charisma, setCharisma] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3000/stats")
+        fetch("https://demo-json.onrender.com/stats")
             .then(res => res.json())
             .then(data => data)
             .then(data => setStats(data[0]))
@@ -26,7 +26,7 @@ function Stats() {
     };
 
     function updateAddStat(stat, value) {
-        fetch("http://localhost:3000/stats/1", {
+        fetch("https://demo-json.onrender.com/stats/1", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -40,7 +40,7 @@ function Stats() {
     }
 
     function updateSubtractStat(stat, value) {
-        fetch("http://localhost:3000/stats/1", {
+        fetch("https://demo-json.onrender.com/stats/1", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
