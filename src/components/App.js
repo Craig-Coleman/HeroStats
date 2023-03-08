@@ -33,7 +33,8 @@ function App() {
     };
 
     function deleteItem(id) {
-        fetch(`https://demo-json.onrender.com/${id}`, {
+        console.log(id)
+        fetch(`https://demo-json.onrender.com/gear/${id}`, {
             method: "DELETE"
         })
         .then(setGear(gear.filter((item) =>item.id !== id)));
