@@ -33,6 +33,8 @@ function Inventory({ gear, addItem, deleteItem }) {
         setWeight("");
     };
 
+    
+
     const gearList = gear.map((item) => {
         return (
             <Item key={item.name} item={item} deleteItem={deleteItem} />
